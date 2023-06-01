@@ -78,8 +78,8 @@ hub:
   extraVolumes: []
   extraVolumeMounts: []
   image:
-    name: jupyterhub/k8s-hub
-    tag: "set-by-chartpress"
+    name: odahub/jh-k8s-hub
+    tag: "2.0.0-n371.hf9af31a3"
     pullPolicy:
     pullSecrets: []
   resources: {}
@@ -293,8 +293,8 @@ proxy:
       runAsGroup: 65534 # nobody group
       allowPrivilegeEscalation: false
     image:
-      name: jupyterhub/k8s-secret-sync
-      tag: "set-by-chartpress"
+      name: odahub/jh-k8s-secret-sync
+      tag: "2.0.0-n367.h0f4b2d0b"
       pullPolicy:
       pullSecrets: []
     resources: {}
@@ -333,8 +333,8 @@ singleuser:
     preferred: []
   networkTools:
     image:
-      name: jupyterhub/k8s-network-tools
-      tag: "set-by-chartpress"
+      name: odahub/jh-k8s-network-tools
+      tag: "2.0.0-n355.h50a08fad"
       pullPolicy:
       pullSecrets: []
     resources: {}
@@ -383,8 +383,8 @@ singleuser:
       volumeNameTemplate: volume-{username}{servername}
       storageAccessModes: [ReadWriteOnce]
   image:
-    name: jupyterhub/k8s-singleuser-sample
-    tag: "set-by-chartpress"
+    name: odahub/jh-k8s-singleuser-sample
+    tag: "2.0.0-n371.hf9af31a3"
     pullPolicy:
     pullSecrets: []
   startTimeout: 300
@@ -592,8 +592,8 @@ prePuller:
     pullOnlyOnChanges: true
     # image and the configuration below relates to the hook-image-awaiter Job
     image:
-      name: jupyterhub/k8s-image-awaiter
-      tag: "set-by-chartpress"
+      name: odahub/jh-k8s-image-awaiter
+      tag: "2.0.0-n310.hc0d0b3b0"
       pullPolicy:
       pullSecrets: []
     containerSecurityContext:

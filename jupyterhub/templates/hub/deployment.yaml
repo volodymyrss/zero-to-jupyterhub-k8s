@@ -169,6 +169,9 @@ spec:
               {{- with .Values.hub.db.pvc.subPath }}
               subPath: {{ . | quote }}
               {{- end }}
+            - mountPath: /home/bot/.arc
+              name: pvc
+              subPath: dot-arc
             {{- end }}
           {{- with .Values.hub.resources }}
           resources:
